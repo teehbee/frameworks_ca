@@ -6,10 +6,29 @@
 
 @import "node_modules/bootstrap/scss/bootstrap";
 
+// Standard colors
+
+$primary-colour: #3f5f58;
+$secondary-colour: #6e9089;
+$main-font-colour: #414141;
+
+.main-green-colour {
+  background-color: $primary-colour;
+}
+
+.secondary-green-colour {
+  background-color: $secondary-colour;
+}
+
 // Root styling
 
 * {
   font-family: "Montserrat", sans-serif;
+  color: $main-font-colour;
+}
+
+.nav-side-item {
+  width: 108px;
 }
 
 // Custom fonts
@@ -89,6 +108,8 @@ $custom-fs-4-rem: 4rem;
   }
 }
 
+// Text
+
 .link-text,
 .header-text {
   font-weight: 500;
@@ -96,4 +117,24 @@ $custom-fs-4-rem: 4rem;
 
 .link-text:hover {
   font-weight: 600;
+}
+
+// Search form
+
+.search-form-input {
+  border-radius: 50px;
+  border: none;
+  height: 35px;
+  color: white;
+  text-indent: 10px;
+}
+
+.search-form-input::placeholder {
+  color: white;
+  font-weight: 300;
+  text-indent: 10px;
+}
+
+.search-form:focus {
+  border: none;
 }
