@@ -1,11 +1,99 @@
-// @import "node_modules/bootstrap/scss/functions";
-// @import "node_modules/bootstrap/scss/variables";
-// @import "node_modules/bootstrap/scss/mixins";
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
 
-// @import "variables";
+@import "node_modules/bootstrap/scss/variables";
 
-// @import "node_modules/bootstrap/scss/bootstrap";
+@import "node_modules/bootstrap/scss/bootstrap";
 
-h1 {
-  color: blue;
+// Root styling
+
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+// Custom fonts
+
+$custom-fs-0-875rem: 0.875rem;
+$custom-fs-1-125rem: 1.125rem;
+$custom-fs-1-25rem: 1.25rem;
+$custom-fs-1-563rem: 1.563rem;
+$custom-fs-1-625rem: 1.625rem;
+$custom-fs-2rem: 2rem;
+$custom-fs-2-125rem: 2.125rem;
+$custom-fs-2-375rem: 2.375rem;
+$custom-fs-3-625rem: 3.625rem;
+$custom-fs-4-rem: 4rem;
+
+// Font sizes
+
+.fs-0-875 {
+  font-size: $custom-fs-0-875rem;
+}
+
+// Responsive font classes
+
+.fs-0-875-to-1-25-rem {
+  font-size: $custom-fs-0-875rem;
+
+  @include media-breakpoint-up("lg") {
+    font-size: $custom-fs-1-25rem;
+  }
+}
+
+.fs-1-to-1-125 {
+  font-size: 1rem;
+
+  @include media-breakpoint-up("lg") {
+    font-size: $custom-fs-1-125rem;
+  }
+}
+
+.fs-1-to-1-563 {
+  font-size: 1rem;
+
+  @include media-breakpoint-up("lg") {
+    font-size: $custom-fs-1-563rem;
+  }
+}
+
+.fs-1-625-to-2-375 {
+  font-size: $custom-fs-1-625rem;
+
+  @include media-breakpoint-up("lg") {
+    font-size: $custom-fs-2-375rem;
+  }
+}
+
+.fs-2-375-to-3 {
+  font-size: $custom-fs-2-375rem;
+
+  @include media-breakpoint-up("lg") {
+    font-size: 3rem;
+  }
+}
+
+.fs-2-125-to-fs-3-625 {
+  font-size: $custom-fs-2-125rem;
+
+  @include media-breakpoint-up("lg") {
+    font-size: $custom-fs-3-625rem;
+  }
+}
+
+.fs2-to-4 {
+  font-size: $custom-fs-2rem;
+
+  @include media-breakpoint-up("lg") {
+    font-size: $custom-fs-4-rem;
+  }
+}
+
+.link-text,
+.header-text {
+  font-weight: 500;
+}
+
+.link-text:hover {
+  font-weight: 600;
 }
