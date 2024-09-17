@@ -5,6 +5,7 @@ import logoSmall from "/public/assets/logo/logo-sm-white.svg";
 import cartSmall from "/public/assets/icons/cart-sm-white.svg";
 import cartLarge from "/public/assets/icons/cart-white.svg";
 import searchIconThick from "/public/assets/icons/search-white.svg";
+import SearchFieldLargeScreen from "./formLarge.jsx";
 import SearchOverlay from "./searchOverlay";
 
 function Header() {
@@ -36,9 +37,7 @@ function Header() {
             <img src={logoSmall} aria-label="main logo" />
           </picture>
         </Link>
-        <div className="container d-none d-lg-block">
-          <input type="text" className="search-form-input w-100 secondary-green-colour" placeholder="Search for a product e.g. milk og crowbars" />
-        </div>
+        <SearchFieldLargeScreen />
         <nav className="nav-side-item d-flex align-items-center px-2">
           <Link to="cart">
             <picture>
