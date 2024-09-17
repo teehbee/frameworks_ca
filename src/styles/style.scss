@@ -1,11 +1,260 @@
-// @import "node_modules/bootstrap/scss/functions";
-// @import "node_modules/bootstrap/scss/variables";
-// @import "node_modules/bootstrap/scss/mixins";
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
 
-// @import "variables";
+@import "node_modules/bootstrap/scss/variables";
 
-// @import "node_modules/bootstrap/scss/bootstrap";
+@import "node_modules/bootstrap/scss/bootstrap";
 
-h1 {
-  color: blue;
+// Standard colors
+
+$primary-colour: #3f5f58;
+$secondary-colour: #6e9089;
+$main-font-colour: #414141;
+
+.main-green-colour {
+  background-color: $primary-colour;
+}
+
+.secondary-green-colour {
+  background-color: $secondary-colour;
+}
+
+// Root styling
+
+* {
+  font-family: "Montserrat", sans-serif;
+  color: $main-font-colour;
+}
+
+.green-font-color {
+  color: $primary-colour;
+}
+
+.nav-side-item {
+  width: 108px;
+}
+
+// Custom fonts
+
+$custom-fs-0-5rem: 0.5rem;
+$custom-fs-0-875rem: 0.875rem;
+$custom-fs-1-125rem: 1.125rem;
+$custom-fs-1-25rem: 1.25rem;
+$custom-fs-1-563rem: 1.563rem;
+$custom-fs-1-625rem: 1.625rem;
+$custom-fs-2rem: 2rem;
+$custom-fs-2-125rem: 2.125rem;
+$custom-fs-2-375rem: 2.375rem;
+$custom-fs-3-625rem: 3.625rem;
+$custom-fs-4-rem: 4rem;
+
+// Font sizes
+
+.fs-0-5rem {
+  font-size: $custom-fs-0-5rem;
+}
+
+.fs-0-875 {
+  font-size: $custom-fs-0-875rem;
+}
+
+// Responsive font classes
+
+.fs-0-875-to-1-25-rem {
+  font-size: $custom-fs-0-875rem;
+
+  @include media-breakpoint-up("lg") {
+    font-size: $custom-fs-1-25rem;
+  }
+}
+
+.fs-1-to-1-125 {
+  font-size: 1rem;
+
+  @include media-breakpoint-up("lg") {
+    font-size: $custom-fs-1-125rem;
+  }
+}
+
+.fs-1-to-1-563 {
+  font-size: 1rem;
+
+  @include media-breakpoint-up("lg") {
+    font-size: $custom-fs-1-563rem;
+  }
+}
+
+.fs-1-625-to-2-375 {
+  font-size: $custom-fs-1-625rem;
+
+  @include media-breakpoint-up("lg") {
+    font-size: $custom-fs-2-375rem;
+  }
+}
+
+.fs-2-375-to-3 {
+  font-size: $custom-fs-2-375rem;
+
+  @include media-breakpoint-up("lg") {
+    font-size: 3rem;
+  }
+}
+
+.fs-2-125-to-fs-3-625 {
+  font-size: $custom-fs-2-125rem;
+
+  @include media-breakpoint-up("lg") {
+    font-size: $custom-fs-3-625rem;
+  }
+}
+
+.fs2-to-4 {
+  font-size: $custom-fs-2rem;
+
+  @include media-breakpoint-up("lg") {
+    font-size: $custom-fs-4-rem;
+  }
+}
+
+// Text
+
+.link-text,
+.header-text {
+  font-weight: 500;
+}
+
+.link-text:hover {
+  font-weight: 600;
+}
+
+// Search form
+
+.search-form-input {
+  border-radius: 50px;
+  border: none;
+  height: 40px;
+  color: white;
+  text-indent: 10px;
+}
+
+.search-form-input::placeholder {
+  color: white;
+  font-weight: 300;
+  text-indent: 10px;
+}
+
+.search-form:focus {
+  border: none;
+}
+
+.Search-icon {
+  height: 27px;
+}
+
+.count-circle {
+  border-radius: 50%;
+  padding: 10px;
+  width: 15px;
+  height: 15px;
+  font-size: 0.875rem;
+}
+
+// Search Overlay
+
+.search-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 92px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: dropDown 0.3s ease-out forwards;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.search-overlay-content {
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.back-icon,
+.search-icon {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+.overlay-search-input {
+  margin: 0 10px;
+  padding: 10px 40px;
+  font-size: 18px;
+  height: 44px;
+  border: none;
+  border-radius: 50px;
+  font-size: 0.7rem;
+  width: 100%;
+  text-indent: 10px;
+}
+
+.overlay-search-input::placeholder {
+  color: white;
+}
+
+.back-icon,
+.search-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.back-icon {
+  left: 20px;
+}
+
+.search-icon {
+  right: 20px;
+}
+
+@keyframes dropDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+// Media queries
+
+@media screen and (min-width: 768px) {
+  .search-overlay {
+    height: 100px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .count-circle {
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+  }
+  .search-overlay {
+    display: none;
+  }
 }
