@@ -11,7 +11,7 @@ function Header() {
   return (
     <header className="main-green-colour">
       <div className="bg-white">
-        <div className="container d-flex justify-content-between">
+        <div className="container d-flex justify-content-between py-1 py-lg-0">
           <div className="d-none d-md-flex">
             <p className="header-text pe-3 my-1 fs-0-875">Delivery 1-3 days</p>
             <p className="header-text px-3 my-1 fs-0-875">Free shipping</p>
@@ -36,15 +36,17 @@ function Header() {
         </div>
         <nav className="nav-side-item d-flex align-items-center px-2">
           <Link to="cart">
-            <picture className="ps-lg-4">
+            <picture>
               <source media="(min-width: 992px)" srcset={cartLarge} />
               <img src={cartSmall} aria-label="main logo" />
             </picture>
           </Link>
           <Link to="cart" className="text-decoration-none">
-            <p className="text-white m-0">0</p>
+            <p className="cart-count  m-0">
+              <span className="count-circle fw-bold bg-white d-flex align-items-center justify-content-center green-font-color">0</span>
+            </p>
           </Link>
-          <img className="SearchIcon ps-2 d-lg-none" src={searchIconThick} />
+          <img className="Search-icon ps-2 d-lg-none" src={searchIconThick} />
         </nav>
       </div>
     </header>

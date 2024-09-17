@@ -27,12 +27,17 @@ $main-font-colour: #414141;
   color: $main-font-colour;
 }
 
+.green-font-color {
+  color: $primary-colour;
+}
+
 .nav-side-item {
   width: 108px;
 }
 
 // Custom fonts
 
+$custom-fs-0-5rem: 0.5rem;
 $custom-fs-0-875rem: 0.875rem;
 $custom-fs-1-125rem: 1.125rem;
 $custom-fs-1-25rem: 1.25rem;
@@ -45,6 +50,10 @@ $custom-fs-3-625rem: 3.625rem;
 $custom-fs-4-rem: 4rem;
 
 // Font sizes
+
+.fs-0-5rem {
+  font-size: $custom-fs-0-5rem;
+}
 
 .fs-0-875 {
   font-size: $custom-fs-0-875rem;
@@ -137,4 +146,26 @@ $custom-fs-4-rem: 4rem;
 
 .search-form:focus {
   border: none;
+}
+
+.Search-icon {
+  height: 27px;
+}
+
+.count-circle {
+  border-radius: 50%;
+  padding: 10px;
+  width: 15px;
+  height: 15px;
+  font-size: 0.875rem;
+}
+
+// Media queries
+
+@media screen and (min-width: 992px) {
+  .count-circle {
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+  }
 }
