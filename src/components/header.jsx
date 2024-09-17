@@ -9,10 +9,24 @@ import SearchFieldLargeScreen from "./formLarge.jsx";
 import SearchOverlay from "./searchOverlay";
 
 function Header() {
+  // Toggle for search overlay on small screens
   const [overLayVisible, setOverlayVisible] = React.useState(false);
 
   const showOverlay = () => setOverlayVisible(true);
   const hideOverlay = () => setOverlayVisible(false);
+
+  // Search form data
+
+  const [searchFormData, setSearchFormData] = React.useState("");
+
+  const handleSearchChange = (event) => {
+    setSearchFormData(event.target.value);
+  };
+
+  const handleSearchSubmit = (event) => {
+    event.preventDefault();
+    console.log(searchFormData);
+  };
 
   return (
     <header className="main-green-colour">
@@ -37,7 +51,7 @@ function Header() {
             <img src={logoSmall} aria-label="main logo" />
           </picture>
         </Link>
-        <SearchFieldLargeScreen />
+        <SearchFieldLargeScreen searchFormData={searchFormData} handleSearchChange={handleSearchChange} handleSearchSubmit={handleSearchSubmit} />
         <nav className="nav-side-item d-flex align-items-center px-2">
           <Link to="cart">
             <picture>
@@ -51,7 +65,7 @@ function Header() {
             </p>
           </Link>
           <img className="ps-2 d-lg-none" onClick={showOverlay} src={searchIconThick} />
-          {overLayVisible && <SearchOverlay onClose={hideOverlay} />}
+          {overLayVisible && <SearchOverlay onClose={hideOverlay} searchFormData={searchFormData} handleSearchChange={handleSearchChange} handleSearchSubmit={handleSearchSubmit} />}
         </nav>
       </div>
     </header>
