@@ -4,10 +4,15 @@ import logoLarge from "/public/assets/logo/logo-lg-white.svg";
 import logoSmall from "/public/assets/logo/logo-sm-white.svg";
 import cartSmall from "/public/assets/icons/cart-sm-white.svg";
 import cartLarge from "/public/assets/icons/cart-white.svg";
-import searchIconThin from "/public/assets/icons/magnifying-glass-thin.svg";
 import searchIconThick from "/public/assets/icons/search-white.svg";
+import SearchOverlay from "./searchOverlay";
 
 function Header() {
+  const [overLayVisible, setOverlayVisible] = React.useState(false);
+
+  const showOverlay = () => setOverlayVisible(true);
+  const hideOverlay = () => setOverlayVisible(false);
+
   return (
     <header className="main-green-colour">
       <div className="bg-white">
@@ -27,7 +32,7 @@ function Header() {
       <div className="d-flex justify-content-between p-3 align-items-center">
         <Link to="/" className="nav-side-item px-2">
           <picture className="ps-lg-4">
-            <source media="(min-width: 992px)" srcset={logoLarge} />
+            <source media="(min-width: 992px)" srcSet={logoLarge} />
             <img src={logoSmall} aria-label="main logo" />
           </picture>
         </Link>
@@ -37,7 +42,7 @@ function Header() {
         <nav className="nav-side-item d-flex align-items-center px-2">
           <Link to="cart">
             <picture>
-              <source media="(min-width: 992px)" srcset={cartLarge} />
+              <source media="(min-width: 992px)" srcSet={cartLarge} />
               <img src={cartSmall} aria-label="main logo" />
             </picture>
           </Link>
@@ -46,7 +51,8 @@ function Header() {
               <span className="count-circle fw-bold bg-white d-flex align-items-center justify-content-center green-font-color">0</span>
             </p>
           </Link>
-          <img className="Search-icon ps-2 d-lg-none" src={searchIconThick} />
+          <img className="ps-2 d-lg-none" onClick={showOverlay} src={searchIconThick} />
+          {overLayVisible && <SearchOverlay onClose={hideOverlay} />}
         </nav>
       </div>
     </header>
