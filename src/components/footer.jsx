@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
-import logoLarge from "/public/assets/logo/logo-lg-white.svg";
-import logoSmall from "/public/assets/logo/logo-sm-white.svg";
+import logoLarge from "/src/assets/logo/logo-lg-white.svg";
+import logoSmall from "/src/assets/logo/logo-sm-white.svg";
 
 function Footer() {
   return (

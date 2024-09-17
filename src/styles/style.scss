@@ -39,6 +39,7 @@ $main-font-colour: #414141;
 
 $custom-fs-0-5rem: 0.5rem;
 $custom-fs-0-75rem: 0.75rem;
+$custom-fs-0-938rem: 0.938rem;
 $custom-fs-0-875rem: 0.875rem;
 $custom-fs-1-125rem: 1.125rem;
 $custom-fs-1-25rem: 1.25rem;
@@ -62,6 +63,10 @@ $custom-fs-4-rem: 4rem;
 
 .fs-0-875 {
   font-size: $custom-fs-0-875rem;
+}
+
+.fs-0-948rem {
+  font-size: $custom-fs-0-938rem;
 }
 
 // Responsive font classes
@@ -98,6 +103,14 @@ $custom-fs-4-rem: 4rem;
   }
 }
 
+.fs-1-25-to-2rem {
+  font-size: $custom-fs-1-25rem;
+
+  @include media-breakpoint-up("lg") {
+    font-size: $custom-fs-2rem;
+  }
+}
+
 .fs-1-625-to-2-375 {
   font-size: $custom-fs-1-625rem;
 
@@ -128,6 +141,20 @@ $custom-fs-4-rem: 4rem;
   @include media-breakpoint-up("lg") {
     font-size: $custom-fs-4-rem;
   }
+}
+
+// Buttons
+
+.green-button {
+  background: $primary-colour;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 3px 50px;
+}
+
+.green-button:hover {
+  background: $secondary-colour;
 }
 
 // Text
@@ -260,6 +287,12 @@ $custom-fs-4-rem: 4rem;
   position: absolute;
   bottom: 0;
   width: 100%;
+}
+
+// Utility classes
+
+.mw-300px {
+  max-width: 300px;
 }
 
 // Media queries
