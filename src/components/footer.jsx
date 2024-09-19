@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 
-import logoLarge from "/src/assets/logo/logo-lg-white.svg";
-import logoSmall from "/src/assets/logo/logo-sm-white.svg";
+import { logoSmall, logoLarge } from "../assets/logo/index.jsx";
 
 function Footer() {
   return (

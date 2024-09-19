@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import cartSmall from "/src/assets/icons/cart-sm-white.svg";
-import cartLarge from "/src/assets/icons/cart-white.svg";
+import { cartSmall, cartLarge } from "../../assets/icons/index.jsx";
 
 function CartLogo() {
   return (

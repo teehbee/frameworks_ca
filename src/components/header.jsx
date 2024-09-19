@@ -1,10 +1,6 @@
 import React from "react";
-import searchIconThick from "/src/assets/icons/search-white.svg";
-import UpperNavBar from "./nav/UpperNavBar.jsx";
-import LogoField from "./nav/LogoField.jsx";
-import SearchFieldLargeScreen from "./nav/SearchformLarge.jsx";
-import SearchOverlay from "./nav/SearchOverlay.jsx";
-import CartLogo from "./nav/CartLogo.jsx";
+import { CartLogo, SearchOverlay, SearchFieldLargeScreen, LogoField, UpperNavBar } from "./index.jsx";
+import { searchIconThick } from "../assets/icons/index.jsx";
 
 function Header() {
   // Toggle for search overlay on small screens

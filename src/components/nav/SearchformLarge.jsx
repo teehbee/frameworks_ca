@@ -1,5 +1,5 @@
 import React from "react";
-import searchIconThin from "/src/assets/icons/magnifying-glass-thin.svg";
+import { searchIconThin } from "../../assets/icons/index.jsx";
 
 function SearchFieldLargeScreen({ handleSearchSubmit, searchFormData, handleSearchChange }) {
   return (
