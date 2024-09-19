@@ -1,6 +1,5 @@
 import React from "react";
-import searchIconThin from "/src/assets/icons/magnifying-glass-thin.svg";
-import backIcon from "/src/assets/icons/back-white.svg";
+import { searchIconThin, backIcon } from "../../assets/icons/index.jsx";
 
 function SearchOverlay({ onClose, handleSearchSubmit, searchFormData, handleSearchChange }) {
   return (
