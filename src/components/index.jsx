@@ -6,5 +6,6 @@ import SearchOverlay from "./nav/SearchOverlay";
 import SearchFieldLargeScreen from "./nav/SearchformLarge";
 import LogoField from "./nav/LogoField";
 import UpperNavBar from "./nav/UpperNavBar";
+import ItemCard from "./storeItems/ItemCard";
 
-export { Footer, Header, Breadcrumbs, CartLogo, SearchOverlay, SearchFieldLargeScreen, LogoField, UpperNavBar };
+export { Footer, Header, Breadcrumbs, CartLogo, SearchOverlay, SearchFieldLargeScreen, LogoField, UpperNavBar, ItemCard };
