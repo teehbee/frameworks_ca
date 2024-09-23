@@ -1,6 +1,6 @@
 import React from "react";
 import ProductInfo from "../components/productPage/ProductInfo";
-import ReviewBox from "../components/productPage/reviewBox";
+import ReviewBox from "../components/productPage/ReviewBox";
 
 function Product() {
   return (
