@@ -48,6 +48,7 @@ $main-font-colour: #414141;
 // Custom fonts
 
 $custom-fs-0-5rem: 0.5rem;
+$custom-fs-0-625rem: 0.625rem;
 $custom-fs-0-75rem: 0.75rem;
 $custom-fs-0-938rem: 0.938rem;
 $custom-fs-0-875rem: 0.875rem;
@@ -80,6 +81,14 @@ $custom-fs-4-rem: 4rem;
 }
 
 // Responsive font classes
+
+.fs-0-625rem-to-0-75-rem {
+  font-size: $custom-fs-0-625rem;
+
+  @include media-breakpoint-up("lg") {
+    font-size: $custom-fs-0-75rem;
+  }
+}
 
 .fs-0-75rem-to-1-rem {
   font-size: $custom-fs-0-75rem;
@@ -177,6 +186,15 @@ $custom-fs-4-rem: 4rem;
 
 .link-text:hover {
   font-weight: 600;
+}
+
+.card-link {
+  text-decoration: none;
+}
+
+.product-card {
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 // Search form
@@ -339,13 +357,15 @@ $custom-fs-4-rem: 4rem;
   }
 }
 
+// Card
+
 // Footer
 
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
+// .footer {
+//   position: absolute;
+//   bottom: 0;
+//   width: 100%;
+// }
 
 // Utility classes
 
