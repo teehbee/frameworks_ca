@@ -1,12 +1,19 @@
 import React from "react";
+import CartItem from "../components/cartPage/CartItem";
+import CartHeader from "../components/cartPage/CartHeader";
+import CartSum from "../components/cartPage/CartSum";
+import CartButton from "../components/cartPage/CartButtonContainer";
 
 function Cart() {
   return (
-    <div>
-      <div className="container text-center pt-5">
-        <h1>This is the shopping cart</h1>
-        <p>The items you buy will go here</p>
-      </div>
+    <div className="container pt-5">
+      <h1 className="fs-1-25-to-2rem fw-bold">Shopping cart</h1>
+      <CartHeader />
+      <CartItem />
+      <CartItem />
+      <CartItem />
+      <CartSum />
+      <CartButton />
     </div>
   );
 }
