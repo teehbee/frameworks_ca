@@ -6,7 +6,7 @@ import { CardImage } from "../../assets/img";
 
 function ItemCard() {
   return (
-    <div className="col-6 col-md-4 col-lg-3 col-xl-2 p-1 mx-auto mb-3">
+    <div className="col-6 col-md-4 col-lg-3 col-xl-2 mx-auto mb-3 ">
       <Card className="product-card">
         <Link to="product">
           <Card.Img variant="top" className="mx-auto card-image" src={CardImage} />

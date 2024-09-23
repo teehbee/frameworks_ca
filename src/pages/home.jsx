@@ -6,6 +6,9 @@ function Home() {
     <div>
       <main>
         <div className="container text-center pt-5">
+          <div className="text-start">
+            <p className="remove-search-queries ms-auto link-text fs-0-75rem-to-1-rem text-decoration-none pt-2 d-none">Remove search items</p>
+          </div>
           <div className="row">
             <ItemCard />
             <ItemCard />
