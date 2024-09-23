@@ -1,11 +1,12 @@
 import React from "react";
 import { productImagePlaceholderLG, productImagePlaceholderSM } from "../assets/img";
 import { cartSmall } from "../assets/icons";
+import ReviewBox from "../components/productPage/reviewBox";
 
 function Product() {
   return (
     <div className="container text-center py-5">
-      <div className="row test">
+      <div className="row">
         <div className="col-12 col-md-6">
           <picture>
             <source media="(min-width: 992px)" srcSet={productImagePlaceholderLG} />
@@ -15,7 +16,9 @@ function Product() {
         <div className="product-info-column col-12 col-md-6">
           <div className="ps-md-5">
             <h1 className="pt-4 pt-md-0 fs-1-5-rem-to-2-rem">Product name</h1>
-            <p className="fs-0-75rem-to-1-rem">Read 3 reviews</p>
+            <a className="text-decoration-none" href="#reviews">
+              <p className="fs-0-75rem-to-1-rem">Read 3 reviews</p>
+            </a>
           </div>
           <div className="product-text-box">
             <p className="fs-0-875-to-1-25-rem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -26,6 +29,12 @@ function Product() {
           </div>
           <p className="ms-auto mt-2 fs-0-75rem-to-1-rem d-none">Product added to cart</p>
         </div>
+      </div>
+      <div id="reviews" className="reviews pt-4 pt-md-5">
+        <h2 className="fs-1-5-rem-to-2-rem">User reviews</h2>
+        <ReviewBox />
+        <ReviewBox />
+        <ReviewBox />
       </div>
     </div>
   );
