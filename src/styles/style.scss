@@ -54,6 +54,7 @@ $custom-fs-0-938rem: 0.938rem;
 $custom-fs-0-875rem: 0.875rem;
 $custom-fs-1-125rem: 1.125rem;
 $custom-fs-1-25rem: 1.25rem;
+$custom-fs-1-5rem: 1.5rem;
 $custom-fs-1-563rem: 1.563rem;
 $custom-fs-1-625rem: 1.625rem;
 $custom-fs-2rem: 2rem;
@@ -124,6 +125,14 @@ $custom-fs-4-rem: 4rem;
 
 .fs-1-25-to-2rem {
   font-size: $custom-fs-1-25rem;
+
+  @include media-breakpoint-up("lg") {
+    font-size: $custom-fs-2rem;
+  }
+}
+
+.fs-1-5-rem-to-2-rem {
+  font-size: $custom-fs-1-5rem;
 
   @include media-breakpoint-up("lg") {
     font-size: $custom-fs-2rem;
@@ -301,6 +310,17 @@ $custom-fs-4-rem: 4rem;
   right: 20px;
 }
 
+// Product page
+
+.cart-button-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  right: 20px;
+  padding-top: 16px;
+}
+
 @keyframes dropDown {
   from {
     transform: translateY(-100%);
@@ -375,9 +395,23 @@ $custom-fs-4-rem: 4rem;
 
 // Media queries
 
+@media screen and (max-width: 767px) {
+  .product-text-box,
+  .product-page-button-container {
+    max-width: 350px;
+    margin: 0 auto;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .search-overlay {
     height: 100px;
+  }
+
+  .product-info-column {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
   }
 }
 
