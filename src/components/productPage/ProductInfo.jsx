@@ -15,7 +15,7 @@ function ProductInfo() {
         <div className="ps-md-5">
           <h1 className="pt-4 pt-md-0 fs-1-5-rem-to-2-rem">Product name</h1>
           <a className="text-decoration-none" href="#reviews">
-            <p className="fs-0-75rem-to-1-rem">Read 3 reviews</p>
+            <p className="fs-0-75rem-to-1-rem">Reviews</p>
           </a>
         </div>
         <div className="product-text-box">
