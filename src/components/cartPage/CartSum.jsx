@@ -1,3 +1,5 @@
+import React from "react";
+
 function CartSum() {
   return (
     <div className="cart-sum">
