@@ -4,6 +4,7 @@ function ContactForm() {
   const [formData, setFormData] = React.useState({
     fullName: "",
     email: "",
+    subject: "",
     message: "",
   });
 
@@ -36,6 +37,10 @@ function ContactForm() {
           Email address <span className="text-danger">*</span>
         </label>
         <input className="mb-2" type="email" name="email" value={formData.email} placeholder="Enter your email address here here" onChange={handleChange} id={id + "-emailAddress"} />
+        <label className="fs-0-75rem-to-1-rem mb-1" htmlFor={id + "-subject"}>
+          Subject<span className="text-danger">*</span>
+        </label>
+        <input className="mb-2" type="text" name="subject" value={formData.subject} placeholder="Enter message subject here" onChange={handleChange} id={id + "-subject"} />
         <label className="fs-0-75rem-to-1-rem mb-1" htmlFor={id + "-message"}>
           Enter message here <span className="text-danger">*</span>
         </label>
