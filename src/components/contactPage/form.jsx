@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
 
 function ContactForm() {
   const [formData, setFormData] = React.useState({
@@ -47,7 +50,7 @@ function ContactForm() {
         <textarea className="mb-3" name="message" id={id + "-message"} value={formData.message} placeholder="Enter message here" onChange={handleChange}></textarea>
         <button className="green-button button-square py-1 py-md-2 mt-2">Send message</button>
       </form>
-      <p className="fs-0-75rem-to-1-rem font-weight-500">Message sent..</p>
+      <p className="message-confirmation-text fs-0-75rem-to-1-rem font-weight-500 d-none">Message sent..</p>
     </div>
   );
 }
