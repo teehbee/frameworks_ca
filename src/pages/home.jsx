@@ -1,23 +1,35 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useOutletContext } from "react-router-dom";
 import { ItemCard } from "../components";
 import useApi from "../api/products";
 
 function Home() {
+  const { searchTerm } = useOutletContext();
   const { data, isLoading, isError } = useApi("https://v2.api.noroff.dev/online-shop");
-  const [visibleCount, setVisibleCount] = useState(18);
+  const [visibleCount, setVisibleCount] = useState(25);
+  const [filteredData, setFilteredData] = useState([]);
+
+  useEffect(() => {
+    if (data && searchTerm) {
+      const filtered = data.filter((item) => item.title.toLowerCase().includes(searchTerm.toLowerCase()));
+      setFilteredData(filtered);
+    } else {
+      setFilteredData(data); // No search term, show all products
+    }
+  }, [data, searchTerm]);
 
   const handleLoadMore = () => {
-    setVisibleCount((prevCount) => prevCount + 18);
+    setVisibleCount((prevCount) => prevCount + 25);
   };
 
-  const visibleData = data.slice(0, visibleCount);
+  const visibleData = filteredData ? filteredData.slice(0, visibleCount) : [];
 
   if (isLoading) {
     return <div className="loader mx-auto my-5"></div>;
   }
 
   if (isError) {
-    <p className="error-text text-danger fw-medium pt-3">There was a problem filling the store. Please try again later. </p>;
+    return <p className="error-text text-danger fw-medium pt-3">There was a problem filling the store. Please try again later.</p>;
   }
 
   return (
@@ -30,8 +42,8 @@ function Home() {
           <div className="row">
             <ItemCard data={visibleData} />
           </div>
-          {visibleCount < data.length && (
-            <p onClick={handleLoadMore} className="home-load-items link-text fs-0-75rem-to-1-rem text-decoration-none py-4 ">
+          {visibleCount < filteredData.length && (
+            <p onClick={handleLoadMore} className="home-load-items link-text fs-0-75rem-to-1-rem text-decoration-none py-4">
               Load more Støff.
             </p>
           )}
