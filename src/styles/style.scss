@@ -331,9 +331,9 @@ $custom-fs-4-rem: 4rem;
   position: absolute;
   background-color: white;
   border: 1px solid #ccc;
-  width: 90%;
+  width: 88%;
   overflow-y: auto;
-  z-index: 1000;
+  z-index: 10;
   list-style: none;
   border-radius: 25px;
   padding: 12px 0 12px;
@@ -341,13 +341,10 @@ $custom-fs-4-rem: 4rem;
   text-indent: 10px;
 }
 
-.autocomplete-suggestion {
-  padding: 8px 16px;
+.autocomplete-dropdown li {
+  padding: 4px 0;
   cursor: pointer;
-}
-
-.autocomplete-suggestion:hover {
-  background-color: #f0f0f0;
+  z-index: 10000;
 }
 
 // Contact page
