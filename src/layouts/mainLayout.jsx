@@ -1,30 +1,33 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Header, Footer, Breadcrumbs } from "../components";
 import { Outlet, useLocation } from "react-router-dom";
+import useApi from "../api/products";
 
 function MainLayout() {
   const location = useLocation();
   const showBreadcrumbs = location.pathname !== "/";
-  const [searchTerm, setSearchTerm] = useState("");
-  const [clearSearch, setClearSearch] = useState(false);
 
-  const productTitles = ["Gold", "Crowbar", "Hammer", "Laptop", "Mobile Phone", "Headphones", "Shampoo"];
+  const { data, isLoading, isError } = useApi("https://v2.api.noroff.dev/online-shop");
+  const [suggestions, setSuggestions] = useState([]);
 
-  const handleSearch = (term) => {
-    setSearchTerm(term);
-    setClearSearch(false);
-  };
-
-  const handleClearSearch = () => {
-    setSearchTerm(""); // Clear the search term
-    setClearSearch(true); // Trigger the search field to be cleared
-  };
+  useEffect(() => {
+    if (data && data.length > 0) {
+      const productSuggestions = data.map((product) => ({
+        title: product.title,
+        id: product.id,
+      }));
+      setSuggestions(productSuggestions);
+    }
+  }, [data]);
 
   return (
     <div>
-      <Header onSearch={handleSearch} clearSearch={clearSearch} suggestions={productTitles} />
+      <Header suggestions={suggestions} />
+
       {showBreadcrumbs && <Breadcrumbs />}
-      <Outlet context={{ searchTerm, setSearchTerm, handleClearSearch }} />
+
+      <Outlet context={{ data, isLoading, isError }} />
+
       <Footer />
     </div>
   );

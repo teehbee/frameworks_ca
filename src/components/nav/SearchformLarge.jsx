@@ -10,11 +10,15 @@ function SearchFieldLargeScreen({ handleSearchSubmit, searchTerm, handleSearchCh
           <img src={searchIconThin} alt="Logo" />
         </button>
       </form>
+      {/* Render the suggestions dropdown */}
       {filteredSuggestions.length > 0 && (
         <ul className="autocomplete-dropdown">
-          {filteredSuggestions.map((suggestion, index) => (
-            <li key={index} onClick={() => handleSuggestionClick(suggestion)} className="autocomplete-suggestion">
-              {suggestion}
+          {filteredSuggestions.map((suggestion) => (
+            <li
+              key={suggestion.id} // Use product id as key
+              onClick={() => handleSuggestionClick(suggestion)} // Handle click to navigate
+            >
+              {suggestion.title} {/* Only render the title as text */}
             </li>
           ))}
         </ul>

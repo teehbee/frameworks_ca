@@ -3,7 +3,7 @@ import { searchIconThin, backIcon } from "../../assets/icons/index.jsx";
 
 function SearchOverlay({ onClose, handleSearchSubmit, searchTerm, handleSearchChange, filteredSuggestions, handleSuggestionClick }) {
   return (
-    <div className="search-overlay">
+    <div className="search-overlay container">
       <div className="search-overlay-content">
         <form onSubmit={handleSearchSubmit} className="input-container">
           <img className="back-icon" src={backIcon} onClick={onClose} />
@@ -14,9 +14,9 @@ function SearchOverlay({ onClose, handleSearchSubmit, searchTerm, handleSearchCh
         </form>
         {filteredSuggestions.length > 0 && (
           <ul className="autocomplete-dropdown">
-            {filteredSuggestions.map((suggestion, index) => (
-              <li key={index} onClick={() => handleSuggestionClick(suggestion)} className="autocomplete-suggestion">
-                {suggestion}
+            {filteredSuggestions.map((suggestion) => (
+              <li key={suggestion.id} onClick={() => handleSuggestionClick(suggestion)}>
+                {suggestion.title}
               </li>
             ))}
           </ul>
