@@ -1,7 +1,7 @@
 import React from "react";
 import { searchIconThin } from "../../assets/icons/index.jsx";
 
-function SearchFieldLargeScreen({ handleSearchSubmit, searchTerm, handleSearchChange }) {
+function SearchFieldLargeScreen({ handleSearchSubmit, searchTerm, handleSearchChange, filteredSuggestions, handleSuggestionClick }) {
   return (
     <div className="container d-none d-lg-block position-relative">
       <form onSubmit={handleSearchSubmit}>
@@ -10,6 +10,15 @@ function SearchFieldLargeScreen({ handleSearchSubmit, searchTerm, handleSearchCh
           <img src={searchIconThin} alt="Logo" />
         </button>
       </form>
+      {filteredSuggestions.length > 0 && (
+        <ul className="autocomplete-dropdown">
+          {filteredSuggestions.map((suggestion, index) => (
+            <li key={index} onClick={() => handleSuggestionClick(suggestion)} className="autocomplete-suggestion">
+              {suggestion}
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 }

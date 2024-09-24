@@ -1,7 +1,7 @@
 import React from "react";
 import { searchIconThin, backIcon } from "../../assets/icons/index.jsx";
 
-function SearchOverlay({ onClose, handleSearchSubmit, searchTerm, handleSearchChange }) {
+function SearchOverlay({ onClose, handleSearchSubmit, searchTerm, handleSearchChange, filteredSuggestions, handleSuggestionClick }) {
   return (
     <div className="search-overlay">
       <div className="search-overlay-content">
@@ -12,6 +12,15 @@ function SearchOverlay({ onClose, handleSearchSubmit, searchTerm, handleSearchCh
             <img className="search-icon" src={searchIconThin} />
           </button>
         </form>
+        {filteredSuggestions.length > 0 && (
+          <ul className="autocomplete-dropdown">
+            {filteredSuggestions.map((suggestion, index) => (
+              <li key={index} onClick={() => handleSuggestionClick(suggestion)} className="autocomplete-suggestion">
+                {suggestion}
+              </li>
+            ))}
+          </ul>
+        )}
       </div>
     </div>
   );

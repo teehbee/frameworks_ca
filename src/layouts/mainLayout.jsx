@@ -8,6 +8,8 @@ function MainLayout() {
   const [searchTerm, setSearchTerm] = useState("");
   const [clearSearch, setClearSearch] = useState(false);
 
+  const productTitles = ["Gold", "Crowbar", "Hammer", "Laptop", "Mobile Phone", "Headphones", "Shampoo"];
+
   const handleSearch = (term) => {
     setSearchTerm(term);
     setClearSearch(false);
@@ -20,7 +22,7 @@ function MainLayout() {
 
   return (
     <div>
-      <Header onSearch={handleSearch} clearSearch={clearSearch} />
+      <Header onSearch={handleSearch} clearSearch={clearSearch} suggestions={productTitles} />
       {showBreadcrumbs && <Breadcrumbs />}
       <Outlet context={{ searchTerm, setSearchTerm, handleClearSearch }} />
       <Footer />
