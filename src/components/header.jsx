@@ -11,15 +11,15 @@ function Header() {
 
   // Search form data
 
-  const [searchFormData, setSearchFormData] = React.useState("");
+  const [searchTerm, setSearchTerm] = React.useState("");
 
   const handleSearchChange = (event) => {
-    setSearchFormData(event.target.value);
+    setSearchTerm(event.target.value);
   };
 
   const handleSearchSubmit = (event) => {
     event.preventDefault();
-    console.log(searchFormData);
+    console.log(searchTerm);
   };
 
   return (
@@ -27,11 +27,11 @@ function Header() {
       <UpperNavBar />
       <div className="d-flex justify-content-between p-3 align-items-center">
         <LogoField />
-        <SearchFieldLargeScreen searchFormData={searchFormData} handleSearchChange={handleSearchChange} handleSearchSubmit={handleSearchSubmit} />
+        <SearchFieldLargeScreen searchTerm={searchTerm} handleSearchChange={handleSearchChange} handleSearchSubmit={handleSearchSubmit} />
         <nav className="nav-side-item d-flex align-items-center px-2">
           <CartLogo />
           <img className="ps-2 d-lg-none" onClick={showOverlay} src={searchIconThick} />
-          {overLayVisible && <SearchOverlay onClose={hideOverlay} searchFormData={searchFormData} handleSearchChange={handleSearchChange} handleSearchSubmit={handleSearchSubmit} />}
+          {overLayVisible && <SearchOverlay onClose={hideOverlay} searchTerm={searchTerm} handleSearchChange={handleSearchChange} handleSearchSubmit={handleSearchSubmit} />}
         </nav>
       </div>
     </header>
