@@ -1,12 +1,25 @@
 import React, { useState } from "react";
 import { ItemCard } from "../components";
+import useApi from "../api/products";
 
 function Home() {
-  // const [visibleCount, setVisibleCount] = useState(18);
+  const { data, isLoading, isError } = useApi("https://v2.api.noroff.dev/online-shop");
+  const [visibleCount, setVisibleCount] = useState(18);
 
-  // function loadMore() {
-  //   setVisibleCount((prevCount) => prevCount + 18);
-  // }
+  const handleLoadMore = () => {
+    setVisibleCount((prevCount) => prevCount + 18);
+  };
+
+  if (isLoading) {
+    return <div className="loader mx-auto mt-5"></div>;
+  }
+
+  if (isError) {
+    <p className="error-text text-danger fw-medium pt-3">There was a problem filling the store. Please try again later. </p>;
+  }
+
+  const visibleData = data.slice(0, visibleCount);
+
   return (
     <div>
       <main>
@@ -15,9 +28,13 @@ function Home() {
             <p className="remove-search-queries ms-auto link-text fs-0-75rem-to-1-rem text-decoration-none pt-2 d-none">Remove search items</p>
           </div>
           <div className="row">
-            <ItemCard />
+            <ItemCard data={visibleData} />
           </div>
-          <p className="home-load-items link-text fs-0-75rem-to-1-rem text-decoration-none py-4 ">Load more Støff.</p>
+          {visibleCount < data.length && (
+            <p onClick={handleLoadMore} className="home-load-items link-text fs-0-75rem-to-1-rem text-decoration-none py-4 ">
+              Load more Støff.
+            </p>
+          )}
         </div>
       </main>
     </div>

@@ -2,21 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
-import useApi from "../../api/products";
 
-function ItemCard({ visibleCount }) {
-  const { data, isLoading, isError } = useApi("https://v2.api.noroff.dev/online-shop");
-
-  if (isLoading) {
-    return <div className="loader mx-auto mt-5"></div>;
-  }
-
-  if (isError) {
-    <p className="error-text text-danger fw-medium pt-3">There was a problem filling the store. Please try again later. </p>;
-  }
-
-  console.log("fetched data is: ", data);
-
+function ItemCard({ data }) {
   return (
     <>
       {data.map((product) => (
