@@ -1,17 +1,16 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { CartLogo, SearchOverlay, SearchFieldLargeScreen, LogoField, UpperNavBar } from "./index.jsx";
 import { searchIconThick } from "../assets/icons/index.jsx";
 
-function Header() {
-  // Toggle for search overlay on small screens
+function Header({ onSearch }) {
   const [overLayVisible, setOverlayVisible] = React.useState(false);
+  const [searchTerm, setSearchTerm] = React.useState("");
 
   const showOverlay = () => setOverlayVisible(true);
   const hideOverlay = () => setOverlayVisible(false);
 
-  // Search form data
-
-  const [searchTerm, setSearchTerm] = React.useState("");
+  const navigate = useNavigate();
 
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.value);
@@ -19,7 +18,8 @@ function Header() {
 
   const handleSearchSubmit = (event) => {
     event.preventDefault();
-    console.log(searchTerm);
+    onSearch(searchTerm); // Notify the parent layout of the search term
+    navigate("/"); // Redirect to the home page
   };
 
   return (
