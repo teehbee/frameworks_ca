@@ -49,7 +49,7 @@ function ContactForm() {
         <label className="fs-0-75rem-to-1-rem my-1" htmlFor={id + "-message"}>
           Enter message here <span className="text-danger">*</span>
         </label>
-        <textarea className="mb-3" name="message" placeholder="Enter message here" {...register("message")} id={id + "-message"}></textarea>
+        <textarea rows="4" className="mb-3" name="message" placeholder="Enter message here" {...register("message")} id={id + "-message"}></textarea>
         {errors.message && <p className="text-danger">{errors.message.message}</p>}
         <button className="green-button button-square py-1 py-md-2 mt-2">Send message</button>
       </form>
