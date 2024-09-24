@@ -11,7 +11,7 @@ function Home() {
   };
 
   if (isLoading) {
-    return <div className="loader mx-auto mt-5"></div>;
+    return <div className="loader mx-auto my-5"></div>;
   }
 
   if (isError) {
