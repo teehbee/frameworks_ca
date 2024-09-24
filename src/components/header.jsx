@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { CartLogo, SearchOverlay, SearchFieldLargeScreen, LogoField, UpperNavBar } from "./index.jsx";
 import { searchIconThick } from "../assets/icons/index.jsx";
 
-function Header({ onSearch }) {
+function Header({ onSearch, clearSearch }) {
   const [overLayVisible, setOverlayVisible] = React.useState(false);
   const [searchTerm, setSearchTerm] = React.useState("");
 
@@ -18,9 +18,15 @@ function Header({ onSearch }) {
 
   const handleSearchSubmit = (event) => {
     event.preventDefault();
-    onSearch(searchTerm); // Notify the parent layout of the search term
-    navigate("/"); // Redirect to the home page
+    onSearch(searchTerm);
+    navigate("/");
   };
+
+  useEffect(() => {
+    if (clearSearch) {
+      setSearchTerm(""); // Clear search input field
+    }
+  }, [clearSearch]);
 
   return (
     <header className="main-green-colour">
