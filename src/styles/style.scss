@@ -190,12 +190,23 @@ $custom-fs-4-rem: 4rem;
   padding-bottom: 10px;
 }
 
+.button-square {
+  border-radius: 5px;
+}
+
 // Text
 
-.link-text,
-.header-text {
+.link-text {
   font-weight: 500;
   cursor: pointer;
+}
+
+.font-weight-500 {
+  font-weight: 500;
+}
+
+.header-text {
+  font-weight: 500;
 }
 
 .link-text:hover {
@@ -313,6 +324,23 @@ $custom-fs-4-rem: 4rem;
 
 .search-icon {
   right: 20px;
+}
+
+// Contact page
+
+.contact-form input {
+  height: 36px;
+}
+
+.contact-form label {
+  font-weight: 500;
+}
+
+.contact-form input,
+.contact-form textarea {
+  text-indent: 10px;
+  border-radius: 5px;
+  border: 1px solid rgba(65, 65, 65, 0.5);
 }
 
 // Product page
@@ -437,6 +465,9 @@ $custom-fs-4-rem: 4rem;
     text-align: left;
     display: flex;
     flex-direction: column;
+  }
+  .contact-form input {
+    height: 40px;
   }
 }
 
