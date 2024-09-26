@@ -5,7 +5,6 @@ import Button from "react-bootstrap/Button";
 import ProductPrice from "../ProductPrice";
 
 function ItemCard({ data }) {
-  console.log(data);
   return (
     <>
       {data.map((product) => (
