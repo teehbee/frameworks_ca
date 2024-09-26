@@ -391,6 +391,10 @@ $custom-fs-4-rem: 4rem;
   object-fit: cover;
 }
 
+.product-img {
+  max-height: 450px;
+}
+
 // Shopping cart
 
 .cart-bottom-border {
@@ -486,6 +490,12 @@ $custom-fs-4-rem: 4rem;
   .search-overlay {
     height: 100px;
   }
+  .card-body {
+    height: 200px;
+  }
+  .product-card {
+    height: 450px;
+  }
 
   .product-info-column {
     text-align: left;
@@ -514,5 +524,8 @@ $custom-fs-4-rem: 4rem;
   }
   .item-card-img {
     max-width: 250px;
+  }
+  .product-img {
+    max-height: 600px;
   }
 }
