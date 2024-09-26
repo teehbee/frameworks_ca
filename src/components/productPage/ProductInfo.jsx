@@ -1,6 +1,6 @@
 import React from "react";
 import { productImagePlaceholderLG, productImagePlaceholderSM } from "../../assets/img";
-import ProductPrice from "../ProductPrice";
+import ProductPrice from "../utils/ProductPrice";
 import { cartSmall } from "../../assets/icons";
 
 function ProductInfo({ product }) {

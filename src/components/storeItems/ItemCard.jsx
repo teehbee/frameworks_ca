@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
-import ProductPrice from "../ProductPrice";
+import ProductPrice from "../utils/ProductPrice";
 
 function ItemCard({ data }) {
   return (
@@ -11,7 +11,7 @@ function ItemCard({ data }) {
         <div key={product.id} className="col-12 col-md-6 col-lg-4 col-xl-3 mx-auto mb-3">
           <Card className="product-card">
             <Link to={`product/${product.id}`}>
-              <Card.Img variant="top" className="item-card-img img-fluid mx-auto card-image" src={product.image.url} />
+              <Card.Img variant="top" className="item-card-img img-fluid mx-auto card-image pt-2" src={product.image.url} />
             </Link>
             <Card.Body className="card-body d-flex flex-column justify-content-between">
               <Link className="card-link" to={`product/${product.id}`}>
