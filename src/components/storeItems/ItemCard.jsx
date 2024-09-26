@@ -9,7 +9,7 @@ function ItemCard({ data }) {
   return (
     <>
       {data.map((product) => (
-        <div key={product.id} className="col-6 col-md-4 col-lg-3 col-xl-2 mx-auto mb-3">
+        <div key={product.id} className="col-12 col-md-6 col-lg-4 col-xl-3 mx-auto mb-3">
           <Card className="product-card">
             <Link to={`product/${product.id}`}>
               <Card.Img variant="top" className="item-card-img img-fluid mx-auto card-image" src={product.image.url} />
