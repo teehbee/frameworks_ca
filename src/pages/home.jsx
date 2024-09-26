@@ -1,35 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
+import { useOutletContext } from "react-router-dom";
 import { ItemCard } from "../components";
 
 function Home() {
+  const { data, isLoading, isError } = useOutletContext();
+  const [visibleCount, setVisibleCount] = useState(18);
+
+  const handleLoadMore = () => {
+    setVisibleCount((prevCount) => prevCount + 18);
+  };
+
+  const visibleData = data?.slice(0, visibleCount);
+
+  if (isLoading) {
+    return <div className="loader mx-auto my-5"></div>;
+  }
+
+  if (isError) {
+    return <p className="error-text text-danger fw-medium pt-3">There was a problem filling the store. Please try again later.</p>;
+  }
+
   return (
-    <div>
+    <>
       <main>
         <div className="container text-center pt-5">
-          <div className="text-start">
-            <p className="remove-search-queries ms-auto link-text fs-0-75rem-to-1-rem text-decoration-none pt-2 d-none">Remove search items</p>
-          </div>
           <div className="row">
-            <ItemCard />
-            <ItemCard />
-            <ItemCard />
-            <ItemCard />
-            <ItemCard />
-            <ItemCard />
-            <ItemCard />
-            <ItemCard />
-            <ItemCard />
-            <ItemCard />
-            <ItemCard />
-            <ItemCard />
+            <ItemCard data={visibleData} />
           </div>
-
-          <p className="error-text text-danger fw-medium pt-3 d-none">There was a problem filling the store. Please try again later. </p>
-          <div className="loader mx-auto mt-5 d-none"></div>
-          <p className="home-load-items link-text fs-0-75rem-to-1-rem text-decoration-none py-4 ">Load more Støff.</p>
+          {visibleCount < data.length && (
+            <p onClick={handleLoadMore} className="home-load-items link-text fs-0-75rem-to-1-rem text-decoration-none py-4 ">
+              Load more Støff.
+            </p>
+          )}
         </div>
       </main>
-    </div>
+    </>
   );
 }
 
