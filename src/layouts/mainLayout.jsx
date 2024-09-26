@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Header, Footer, Breadcrumbs } from "../components";
+import { Header, Footer } from "../components";
+import { Breadcrumbs } from "../components";
 import { Outlet, useLocation } from "react-router-dom";
 import useApi from "../api/products";
 

@@ -1,6 +1,6 @@
 import Header from "./header";
 import Footer from "./footer";
-import Breadcrumbs from "./Breadcrumbs";
+import Breadcrumbs from "./utils/Breadcrumbs";
 import CartLogo from "./nav/CartLogo";
 import SearchOverlay from "./nav/SearchOverlay";
 import SearchFieldLargeScreen from "./nav/SearchformLarge";
