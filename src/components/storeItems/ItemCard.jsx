@@ -16,12 +16,12 @@ function ItemCard({ data }) {
             </Link>
             <Card.Body>
               <Link className="card-link" to={`product/${product.id}`}>
-                <Card.Title className="fs-0-75rem-to-1-rem link-text green-font-color">{product.title}</Card.Title>
+                <Card.Title className="fs-0-875-to-1-25-re link-text green-font-color">{product.title}</Card.Title>
               </Link>
-              <div className="fs-0-625rem-to-0-75-rem font-weight-500">
+              <div className="fs-0-75rem-to-1-rem font-weight-500">
                 <ProductPrice price={product.price} discountedPrice={product.discountedPrice} />
               </div>
-              <Button className="add-to-cart-button green-button fs-0-75rem py-2 px-3 px-sm-4 px-md-4 px-xl-4 mt-3">Add to cart</Button>
+              <Button className="add-to-cart-button green-button fs-0-75rem-to-1-rem py-2 px-3 px-sm-4 px-md-4 px-xl-4 mt-3">Add to cart</Button>
             </Card.Body>
           </Card>
         </div>
