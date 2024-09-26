@@ -15,13 +15,15 @@ function Product() {
     return <p className="error-text text-danger fw-medium pt-3">There was a problem filling the store. Please try again later.</p>;
   }
 
+  if (!data) {
+    return <div>No product data</div>;
+  }
+
   return (
     <div className="container text-center py-5">
-      <ProductInfo />
+      <ProductInfo product={data} />
       <div id="reviews" className="reviews pt-4 pt-md-5">
         <h2 className="fs-1-5-rem-to-2-rem">User reviews</h2>
-        <ReviewBox />
-        <ReviewBox />
         <ReviewBox />
       </div>
     </div>
