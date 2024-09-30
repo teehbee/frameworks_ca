@@ -1,17 +1,20 @@
+import React, { useContext } from "react";
+import { CartContext } from "../utils/cartContext";
 import CloseButton from "react-bootstrap/CloseButton";
 import { CardImage } from "../../assets/img";
 
-function CartItem() {
+function CartItem({ product }) {
+  const { removeFromCart } = useContext(CartContext);
   return (
     <div className="cart-product align-items-center row py-3">
       <div className="col-1">
-        <CloseButton />
+        <CloseButton onClick={() => removeFromCart(product.id)} />
       </div>
       <div className="col-md-1 d-none d-lg-block">
         <img className="cart-img img-fluid" src={CardImage} alt="product image" />
       </div>
       <div className="col-5 col-md-7">
-        <p className="m-0 fs-0-75rem-to-1-rem link-text">Product name goes here</p>
+        <p className="m-0 fs-0-75rem-to-1-rem link-text">Title goes here</p>
       </div>
       <div className="col-2 col-md-2 ms-auto">
         <p className="fs-0-75rem-to-1-rem">$75</p>

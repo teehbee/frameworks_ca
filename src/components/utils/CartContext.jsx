@@ -13,7 +13,11 @@ function CartProvider({ children }) {
     });
   };
 
-  return <CartContext.Provider value={{ cart, addToCart }}>{children}</CartContext.Provider>;
+  const removeFromCart = (productId) => {
+    setCart((prevCart) => prevCart.filter((product) => product.id !== productId));
+  };
+
+  return <CartContext.Provider value={{ cart, addToCart, removeFromCart }}>{children}</CartContext.Provider>;
 }
 
 export default CartProvider;
