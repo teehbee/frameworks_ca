@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { CartContext } from "../utils/cartContext";
+import { Link } from "react-router-dom";
 import CloseButton from "react-bootstrap/CloseButton";
 import { CardImage } from "../../assets/img";
 
@@ -11,13 +12,17 @@ function CartItem({ product }) {
         <CloseButton onClick={() => removeFromCart(product.id)} />
       </div>
       <div className="col-md-1 d-none d-lg-block">
-        <img className="cart-img img-fluid" src={CardImage} alt="product image" />
+        <Link to={`/product/${product.id}`}>
+          <img className="cart-img img-fluid" src={product.image.url} alt="product image" />
+        </Link>
       </div>
       <div className="col-5 col-md-7">
-        <p className="m-0 fs-0-75rem-to-1-rem link-text">Title goes here</p>
+        <Link className="text-decoration-none" to={`/product/${product.id}`}>
+          <p className="m-0 fs-0-75rem-to-1-rem link-text">{product.title}</p>
+        </Link>
       </div>
       <div className="col-2 col-md-2 ms-auto">
-        <p className="fs-0-75rem-to-1-rem">$75</p>
+        <p className="fs-0-75rem-to-1-rem">${product.price}</p>
       </div>
       <div className="col-3 col-sm-2 col-md-1 text-end">
         <p className="fs-0-75rem-to-1-rem">1</p>
