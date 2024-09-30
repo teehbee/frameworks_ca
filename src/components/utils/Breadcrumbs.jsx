@@ -6,7 +6,7 @@ function Breadcrumbs() {
   const location = useLocation();
   const pathnames = location.pathname.split("/").filter((x) => x);
 
-  console.log(pathnames);
+  const isProductPage = location.pathname.startsWith("/product");
 
   return (
     <Breadcrumb className="bread-crumbs ps-2 ps-lg-5 pt-2 pt-lg-3 fs-0-75rem-to-1-rem main-font-colour">
@@ -15,6 +15,9 @@ function Breadcrumbs() {
       </Breadcrumb.Item>
       {pathnames.map((value, index) => {
         const to = `/${pathnames.slice(0, index + 1).join("/")}`;
+        if (isProductPage && index > 0) {
+          return null;
+        }
         return (
           <Breadcrumb.Item key={to} linkAs={Link} linkProps={{ to }}>
             {value.charAt(0).toUpperCase() + value.slice(1)}
