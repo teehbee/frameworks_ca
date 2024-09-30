@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
+import { CartContext } from "../utils/CartContext.jsx";
 import { Link } from "react-router-dom";
 import { cartSmall, cartLarge } from "../../assets/icons/index.jsx";
 
 function CartLogo() {
+  const { cart } = useContext(CartContext);
   return (
     <>
       <Link to="cart">
@@ -13,7 +15,7 @@ function CartLogo() {
       </Link>
       <Link to="cart" className="text-decoration-none">
         <p className="cart-count  m-0">
-          <span className="count-circle fw-bold bg-white d-flex align-items-center justify-content-center green-font-color">0</span>
+          <span className="count-circle fw-bold bg-white d-flex align-items-center justify-content-center green-font-color">{cart.length}</span>
         </p>
       </Link>
     </>

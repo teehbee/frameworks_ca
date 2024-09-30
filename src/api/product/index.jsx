@@ -17,7 +17,6 @@ function useProduct() {
 
         setData(json.data);
       } catch (error) {
-        console.log(error);
         setIsError(true);
       } finally {
         setIsLoading(false);
