@@ -9,7 +9,7 @@ function ProductInfo({ product }) {
       <div className="col-12 col-md-6">
         <img className="product-img img-fluid" src={product.image.url} alt="placeholder" />
       </div>
-      <div className="product-info-column col-12 col-md-6">
+      <div className="product-info-column col-8 col-md-6 mx-auto">
         <div className="ps-md-5">
           <h1 className="pt-4 pt-md-0 fs-1-5-rem-to-2-rem">{product.title}</h1>
           <a className="text-decoration-none" href="#reviews">
