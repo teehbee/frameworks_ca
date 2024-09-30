@@ -7,9 +7,12 @@ function CartProvider({ children }) {
 
   const addToCart = (product) => {
     setCart((prevCart) => {
-      const updatedCart = [...prevCart, product];
-      console.log("Cart Items:", updatedCart);
-      return updatedCart;
+      const existingProduct = prevCart.find((item) => item.id === product.id);
+      if (existingProduct) {
+        return prevCart.map((item) => (item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item));
+      } else {
+        return [...prevCart, { ...product, quantity: 1 }];
+      }
     });
   };
 

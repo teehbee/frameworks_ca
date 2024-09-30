@@ -25,7 +25,7 @@ function CartItem({ product }) {
         <p className="fs-0-75rem-to-1-rem">${product.price}</p>
       </div>
       <div className="col-3 col-sm-2 col-md-1 text-end">
-        <p className="fs-0-75rem-to-1-rem">1</p>
+        <p className="fs-0-75rem-to-1-rem">{product.quantity}</p>
       </div>
     </div>
   );

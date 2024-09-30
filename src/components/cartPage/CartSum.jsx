@@ -5,8 +5,8 @@ import Cart from "../../pages/cart";
 function CartSum() {
   const { cart } = useContext(CartContext);
 
-  const totalSum = cart.reduce((sum, product) => sum + product.price, 0);
-  const itemCount = cart.length;
+  const totalSum = cart.reduce((sum, product) => sum + product.price * product.quantity, 0);
+  const itemCount = cart.reduce((count, product) => count + product.quantity, 0);
   return (
     <div className="cart-sum">
       <div className="row cart-top-border pt-3">
