@@ -2,7 +2,6 @@ import React from "react";
 import { starFilled, starNotFilled } from "../../assets/icons";
 
 function ReviewBox({ reviews }) {
-  console.log("reviews", reviews);
   return (
     <div className="review-container py-4 mx-auto">
       {reviews.map((review, index) => (

@@ -8,7 +8,7 @@ function CartProvider({ children }) {
   const addToCart = (product) => {
     setCart((prevCart) => {
       const updatedCart = [...prevCart, product];
-      console.log("Cart Items:", updatedCart); // Log the cart items
+      console.log("Cart Items:", updatedCart);
       return updatedCart;
     });
   };

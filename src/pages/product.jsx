@@ -5,7 +5,6 @@ import ReviewBox from "../components/productPage/ReviewBox";
 
 function Product() {
   const { data, isLoading, isError } = useProduct();
-  console.log(data);
 
   if (isLoading) {
     return <div className="loader mx-auto my-5"></div>;
