@@ -11,7 +11,7 @@ function Cart() {
     <div className="container pt-5">
       <h1 className="fs-1-25-to-2rem fw-bold">Shopping cart</h1>
       <CartHeader />
-      {cart.length > 0 ? cart.map((product) => <CartItem key={product.id} product={product} />) : <p>Your cart is empty</p>}
+      {cart.length > 0 ? cart.map((product) => <CartItem key={product.id} product={product} />) : <p className="pt-3 fw-bold fs-0-75rem-to-1-rem">Your cart is empty</p>}
       <CartSum />
       <CartButton />
     </div>
