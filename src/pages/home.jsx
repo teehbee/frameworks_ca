@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useOutletContext } from "react-router-dom";
 import { ItemCard } from "../components";
 import useScrollToTop from "../components/utils/useScrollToTop";
+import CookieConsentPopup from "../components/utils/CookieConsentPopup";
 
 function Home() {
   useScrollToTop();
@@ -35,6 +36,7 @@ function Home() {
             </p>
           )}
         </div>
+        <CookieConsentPopup />
       </main>
     </>
   );
