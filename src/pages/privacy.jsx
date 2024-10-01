@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Privacy() {
   return (
@@ -42,6 +43,11 @@ function Privacy() {
         <li>If you have previously agreed to us using your personal information for direct marketing purposes, you may change your mind at any time by writing to or emailing us</li>
       </ul>
       <p>This is a mock site, so no actual personal information is collected or used.</p>
+      <div className="text-center py-4">
+        <Link to="/" className="mx-auto link-text fs-0-75rem-to-1-rem main-font-colour">
+          Continue shopping
+        </Link>
+      </div>
     </div>
   );
 }
