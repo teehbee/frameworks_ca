@@ -15,7 +15,6 @@ function CartButton() {
           Purchase items
         </button>
       </Link>
-
       <Link to="/" className="link-text fs-0-75rem-to-1-rem main-font-colour">
         Continue shopping
       </Link>

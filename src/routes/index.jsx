@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-import { Home, Product, Contact, Cart, Success } from "../pages";
+import { Home, Product, Contact, Cart, Success, Privacy } from "../pages";
 import { MainLayout } from "../layouts";
 
 const router = createBrowserRouter([
@@ -26,6 +26,10 @@ const router = createBrowserRouter([
       {
         path: "success",
         element: <Success />,
+      },
+      {
+        path: "privacy",
+        element: <Privacy />,
       },
     ],
   },
