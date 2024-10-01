@@ -22,7 +22,7 @@ function MainLayout() {
   }, [data]);
 
   return (
-    <div>
+    <>
       <Header suggestions={suggestions} />
 
       {showBreadcrumbs && <Breadcrumbs />}
@@ -30,7 +30,7 @@ function MainLayout() {
       <Outlet context={{ data, isLoading, isError }} />
 
       <Footer />
-    </div>
+    </>
   );
 }
 
