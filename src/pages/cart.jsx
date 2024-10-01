@@ -4,8 +4,10 @@ import CartItem from "../components/cartPage/CartItem";
 import CartHeader from "../components/cartPage/CartHeader";
 import CartSum from "../components/cartPage/CartSum";
 import CartButton from "../components/cartPage/CartButtonContainer";
+import useScrollToTop from "../components/utils/useScrollToTop";
 
 function Cart() {
+  useScrollToTop();
   const { cart = [] } = useContext(CartContext);
   return (
     <div className="container pt-5">

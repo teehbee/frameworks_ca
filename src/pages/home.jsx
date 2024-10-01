@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { useOutletContext } from "react-router-dom";
 import { ItemCard } from "../components";
+import useScrollToTop from "../components/utils/useScrollToTop";
 
 function Home() {
+  useScrollToTop();
   const { data, isLoading, isError } = useOutletContext();
   const [visibleCount, setVisibleCount] = useState(18);
 

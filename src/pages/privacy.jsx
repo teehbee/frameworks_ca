@@ -1,7 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import useScrollToTop from "../components/utils/useScrollToTop";
 
 function Privacy() {
+  useScrollToTop();
+
   return (
     <div className="container pb-5">
       <div className=" pb-3 pt-5">
