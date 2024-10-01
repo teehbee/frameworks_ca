@@ -45,6 +45,15 @@ $main-font-colour: #414141;
   font-weight: 500;
 }
 
+// Footer
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
 // Custom fonts
 
 $custom-fs-0-5rem: 0.5rem;
