@@ -18,7 +18,7 @@ function Footer() {
         <Link to="cart" className="link-text fs-0-75rem-to-1-rem text-decoration-none pt-2 text-light">
           Shopping cart
         </Link>
-        <Link to="privacy" className="link-text fs-0-75rem-to-1-rem text-decoration-none pt-2 text-light">
+        <Link to="privacy-and-cookies" className="link-text fs-0-75rem-to-1-rem text-decoration-none pt-2 text-light">
           Privacy and cookies
         </Link>
         <p className="text-light fs-0-75rem pt-2 m-0">© 2024 Tor-Håkon Bergseng. All rights reserved</p>
