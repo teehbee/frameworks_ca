@@ -26,6 +26,12 @@ $main-font-colour: #414141;
 
 // Root styling
 
+.success-popup {
+  background: $primary-colour;
+  color: white;
+  border: none;
+}
+
 #root {
   min-height: 100vh;
   display: grid;

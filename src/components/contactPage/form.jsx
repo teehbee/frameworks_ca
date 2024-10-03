@@ -28,7 +28,7 @@ function ContactForm() {
   const id = React.useId();
 
   return (
-    <div className="container text-center py-5">
+    <div className="container text-center py-5 mt-5">
       <h1 className="fs-1-25-to-2rem">Contact us, we would love to hear from you!</h1>
       <form onSubmit={handleSubmit(onSubmit)} className="contact-form d-flex flex-column mx-auto py-3 py-md-5 text-start">
         <label className="fs-0-75rem-to-1-rem my-1" htmlFor={id + "-fullName"}>
