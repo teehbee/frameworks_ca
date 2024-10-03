@@ -15,7 +15,7 @@ function ItemCard({ data }) {
     setShowPopup(true);
     setTimeout(() => {
       setShowPopup(false);
-    }, 3000);
+    }, 2000);
   };
 
   return (
