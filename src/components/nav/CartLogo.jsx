@@ -5,6 +5,7 @@ import { cartSmall, cartLarge } from "../../assets/icons/index.jsx";
 
 function CartLogo() {
   const { cart } = useContext(CartContext);
+  const itemCount = cart.reduce((count, product) => count + product.quantity, 0);
   return (
     <>
       <Link to="cart">
@@ -15,7 +16,7 @@ function CartLogo() {
       </Link>
       <Link to="cart" className="text-decoration-none">
         <p className="cart-count  m-0">
-          <span className="count-circle fw-bold bg-white d-flex align-items-center justify-content-center green-font-color">{cart.length}</span>
+          <span className="count-circle fw-bold bg-white d-flex align-items-center justify-content-center green-font-color">{itemCount}</span>
         </p>
       </Link>
     </>
