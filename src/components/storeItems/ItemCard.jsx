@@ -23,7 +23,7 @@ function ItemCard({ data }) {
                 <div className="fs-0-75rem-to-1-rem font-weight-500">
                   <ProductPrice price={product.price} discountedPrice={product.discountedPrice} />
                 </div>
-                <Button onClick={() => addToCart(product)} className="add-to-cart-button green-button fs-0-75rem-to-1-rem py-2 px-3 px-sm-4 px-md-4 px-xl-4 mt-3 w-100">
+                <Button onClick={() => addToCart(product)} className="green-button  fs-0-75rem-to-1-rem py-2 px-3 px-sm-4 px-md-4 px-xl-4 mt-3 w-100">
                   Add to cart
                 </Button>
               </div>
