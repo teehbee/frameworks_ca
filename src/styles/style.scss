@@ -41,6 +41,8 @@ $main-font-colour: #414141;
   color: $primary-colour;
 }
 
+// Nav
+
 .nav-side-item {
   width: 108px;
 }
@@ -50,8 +52,6 @@ $main-font-colour: #414141;
   text-decoration: none;
   font-weight: 500;
 }
-
-// Footer
 
 // Custom fonts
 
@@ -532,7 +532,7 @@ $custom-fs-4-rem: 4rem;
     width: 98%;
   }
   .item-card-img {
-    max-width: 250px;
+    height: 250px;
   }
   .product-img {
     max-height: 600px;
