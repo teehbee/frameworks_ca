@@ -4,7 +4,11 @@ import useScrollToTop from "../components/utils/useScrollToTop";
 
 function Contact() {
   useScrollToTop();
-  return <ContactForm />;
+  return (
+    <main>
+      <ContactForm />;
+    </main>
+  );
 }
 
 export default Contact;
