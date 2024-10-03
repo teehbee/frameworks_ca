@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useOutletContext } from "react-router-dom";
 import { ItemCard } from "../components";
 import useScrollToTop from "../components/utils/useScrollToTop";
@@ -7,7 +7,14 @@ import CookieConsentPopup from "../components/utils/CookieConsentPopup";
 function Home() {
   useScrollToTop();
   const { data, isLoading, isError } = useOutletContext();
-  const [visibleCount, setVisibleCount] = useState(18);
+  const [visibleCount, setVisibleCount] = useState(() => {
+    const savedCount = localStorage.getItem("visibleCount");
+    return savedCount ? parseInt(savedCount, 10) : 18;
+  });
+
+  useEffect(() => {
+    localStorage.setItem("visibleCount", visibleCount);
+  }, [visibleCount]);
 
   const handleLoadMore = () => {
     setVisibleCount((prevCount) => prevCount + 18);
