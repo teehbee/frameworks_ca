@@ -4,7 +4,7 @@ import { logoSmall, logoLarge } from "../assets/logo/index.jsx";
 
 function Footer() {
   return (
-    <footer className="footer">
+    <footer className="footer mt-auto">
       <div className="text-center main-green-colour py-4 text-light d-flex flex-column justify-content-center align-items-center">
         <Link to="/" className="nav-side-item">
           <picture>

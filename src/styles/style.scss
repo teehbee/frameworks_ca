@@ -26,10 +26,20 @@ $main-font-colour: #414141;
 
 // Root styling
 
+.success-popup {
+  background: $primary-colour;
+  color: white;
+  border: none;
+}
+
 #root {
   min-height: 100vh;
   display: grid;
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: auto auto 1fr auto;
+}
+
+main {
+  padding-top: 100px;
 }
 
 * {
@@ -37,9 +47,21 @@ $main-font-colour: #414141;
   color: $main-font-colour;
 }
 
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+
+.breadcrumb {
+  margin-top: 110px;
+}
+
 .green-font-color {
   color: $primary-colour;
 }
+
+// Nav-header
 
 .nav-side-item {
   width: 108px;
@@ -50,8 +72,6 @@ $main-font-colour: #414141;
   text-decoration: none;
   font-weight: 500;
 }
-
-// Footer
 
 // Custom fonts
 
@@ -191,6 +211,10 @@ $custom-fs-4-rem: 4rem;
 
 .green-button:hover {
   background: $secondary-colour;
+}
+
+.green-button:active {
+  background: $secondary-colour !important;
 }
 
 .product-page-button-container button {
@@ -532,6 +556,7 @@ $custom-fs-4-rem: 4rem;
     width: 98%;
   }
   .item-card-img {
+    height: 250px;
     max-width: 250px;
   }
   .product-img {
