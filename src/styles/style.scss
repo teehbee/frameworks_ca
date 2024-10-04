@@ -39,7 +39,7 @@ $main-font-colour: #414141;
 }
 
 main {
-  padding-top: 100px;
+  padding-top: 50px;
 }
 
 * {
@@ -224,6 +224,12 @@ $custom-fs-4-rem: 4rem;
 
 .button-square {
   border-radius: 5px;
+}
+
+// Home
+
+.frontpage-main-container {
+  padding-top: 100px;
 }
 
 // Text
