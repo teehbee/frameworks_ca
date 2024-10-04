@@ -20,7 +20,7 @@ function ProductInfo({ product }) {
     <>
       <div className="row">
         <div className="col-12 col-md-6">
-          <img className="product-img img-fluid" src={product.image.url} alt="placeholder" />
+          <img className="product-img img-fluid" src={product.image.url} alt={product.image.alt || "Product image"} />
         </div>
         <div className="product-info-column col-8 col-md-6 mx-auto">
           <div className="ps-md-5">

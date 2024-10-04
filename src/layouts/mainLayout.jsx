@@ -21,6 +21,8 @@ function MainLayout() {
     }
   }, [data]);
 
+  console.log(data);
+
   return (
     <>
       <Header suggestions={suggestions} />

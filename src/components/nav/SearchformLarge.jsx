@@ -5,7 +5,7 @@ function SearchFieldLargeScreen({ handleSearchSubmit, searchTerm, handleSearchCh
   return (
     <div className="container d-none d-lg-block position-relative">
       <form onSubmit={handleSearchSubmit}>
-        <input type="text" className="search-form-input w-100 secondary-green-colour" placeholder="Search for a product e.g. milk og crowbars" value={searchTerm} onChange={handleSearchChange} />
+        <input type="text" className="search-form-input w-100 secondary-green-colour" placeholder="Search for a product e.g. milk og crowbars" value={searchTerm} onChange={handleSearchChange} aria-label="Search form" />
         <button className="search-icon" aria-label="Search field">
           <img src={searchIconThin} alt="Logo" />
         </button>
