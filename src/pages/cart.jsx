@@ -10,7 +10,7 @@ function Cart() {
   useScrollToTop();
   const { cart = [] } = useContext(CartContext);
   return (
-    <main>
+    <>
       <div className="container">
         <h1 className="fs-1-25-to-2rem fw-bold">Shopping cart</h1>
         <CartHeader />
@@ -18,7 +18,7 @@ function Cart() {
         <CartSum />
         <CartButton />
       </div>
-    </main>
+    </>
   );
 }
 

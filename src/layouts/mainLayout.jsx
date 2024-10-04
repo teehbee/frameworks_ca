@@ -27,7 +27,9 @@ function MainLayout() {
 
       {showBreadcrumbs && <Breadcrumbs />}
 
-      <Outlet context={{ data, isLoading, isError }} />
+      <main>
+        <Outlet context={{ data, isLoading, isError }} />
+      </main>
 
       <Footer />
     </>

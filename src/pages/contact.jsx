@@ -5,9 +5,9 @@ import useScrollToTop from "../components/utils/useScrollToTop";
 function Contact() {
   useScrollToTop();
   return (
-    <main>
+    <>
       <ContactForm />;
-    </main>
+    </>
   );
 }
 
