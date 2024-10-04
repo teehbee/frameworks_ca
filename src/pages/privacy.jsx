@@ -5,7 +5,7 @@ function Privacy() {
   useScrollToTop();
 
   return (
-    <main>
+    <>
       <div className="container pb-5">
         <div className=" pb-3">
           <h1>Privacy and Cookies Policy</h1>
@@ -52,7 +52,7 @@ function Privacy() {
           </Link>
         </div>
       </div>
-    </main>
+    </>
   );
 }
 
