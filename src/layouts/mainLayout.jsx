@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Header, Footer } from "../components";
 import { Breadcrumbs } from "../components";
 import { Outlet, useLocation } from "react-router-dom";
@@ -21,15 +21,12 @@ function MainLayout() {
     }
   }, [data]);
 
-  console.log(data);
-
   return (
     <>
       <Header suggestions={suggestions} />
 
-      {showBreadcrumbs && <Breadcrumbs />}
-
       <main>
+        {showBreadcrumbs && <Breadcrumbs />}
         <Outlet context={{ data, isLoading, isError }} />
       </main>
 

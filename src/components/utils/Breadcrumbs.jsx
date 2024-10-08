@@ -8,7 +8,7 @@ function Breadcrumbs() {
   const isProductPage = location.pathname.startsWith("/product");
 
   return (
-    <Breadcrumb className="bread-crumbs ps-2 ps-lg-5 pt-2 pt-lg-3 fs-0-75rem-to-1-rem main-font-colour">
+    <Breadcrumb className="bread-crumbs ps-2 ps-lg-5 pt-lg-3 pb-5 fs-0-75rem-to-1-rem main-font-colour">
       <Breadcrumb.Item linkAs={Link} linkProps={{ to: "/" }}>
         Home
       </Breadcrumb.Item>
