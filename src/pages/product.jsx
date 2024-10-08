@@ -11,11 +11,19 @@ function Product() {
   }
 
   if (isError) {
-    return <p className="error-text text-danger fw-medium pt-3">There was a problem filling the store. Please try again later.</p>;
+    return (
+      <div className="container text-center error-text text-danger fw-medium pb-5">
+        <p className="error-text text-danger fw-medium fs-1-to-1-563">We could not find your product, please try again later</p>
+      </div>
+    );
   }
 
   if (!data) {
-    return <div>No product data</div>;
+    return (
+      <div className="container text-center error-text text-danger fw-medium pb-5">
+        <p className="error-text text-danger fw-medium fs-1-to-1-563">We could not find your product, please try again later</p>
+      </div>
+    );
   }
 
   return (
