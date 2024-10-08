@@ -26,12 +26,6 @@ $main-font-colour: #414141;
 
 // Root styling
 
-.success-popup {
-  background: $primary-colour;
-  color: white;
-  border: none;
-}
-
 #root {
   min-height: 100vh;
   display: grid;
@@ -45,16 +39,6 @@ main {
 * {
   font-family: "Montserrat", sans-serif;
   color: $main-font-colour;
-}
-
-header {
-  position: fixed;
-  width: 100%;
-  z-index: 100;
-}
-
-.breadcrumb {
-  margin-top: 110px;
 }
 
 .green-font-color {
@@ -71,6 +55,23 @@ header {
   color: #414141;
   text-decoration: none;
   font-weight: 500;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+
+.breadcrumb {
+  margin-top: 110px;
+}
+
+// Popup
+
+.success-popup {
+  background: $primary-colour;
+  color: white;
 }
 
 // Custom fonts

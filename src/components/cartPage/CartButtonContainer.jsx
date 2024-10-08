@@ -17,7 +17,7 @@ function CartButton() {
   return (
     <div className="cart-button-container text-center pb-2 pb-md-5">
       <Link to={cart.length > 0 ? "/success" : "#"}>
-        <button onClick={handlePurchase} className="green-button w-100 my-3 my-md-5 py-1 py-md-2">
+        <button onClick={handlePurchase} className="green-button w-100 my-3 my-md-5 py-1 py-md-2 fw-bold">
           Purchase items
         </button>
       </Link>
