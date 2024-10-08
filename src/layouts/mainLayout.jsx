@@ -8,7 +8,7 @@ function MainLayout() {
   const location = useLocation();
   const showBreadcrumbs = location.pathname !== "/";
 
-  const { data, isLoading, isError } = useApi("https://v2.api.noroff.dev/online-shop");
+  const { data, isLoading, isError } = useApi(import.meta.env.VITE_API_BASE_URL);
   const [suggestions, setSuggestions] = useState([]);
 
   useEffect(() => {

@@ -12,7 +12,7 @@ function useProduct() {
       try {
         setIsLoading(true);
         setIsError(false);
-        const response = await fetch(`https://v2.api.noroff.dev/online-shop/${id}`);
+        const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}${id}`);
         const json = await response.json();
 
         setData(json.data);
