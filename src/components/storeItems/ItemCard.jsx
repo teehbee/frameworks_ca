@@ -43,7 +43,7 @@ function ItemCard({ data }) {
         </div>
       ))}
       {showPopup && (
-        <Alert variant="success" className="success-popup fixed-bottom mx-auto w-50">
+        <Alert variant="success" className="success-popup fixed-bottom mx-auto w-50 border border-primary">
           Product added to cart
         </Alert>
       )}
