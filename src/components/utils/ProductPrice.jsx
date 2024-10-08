@@ -6,7 +6,7 @@ function ProductPrice({ price, discountedPrice }) {
     <>
       {price !== discountedPrice && <span style={{ textDecoration: "line-through", marginRight: "8px" }}>NOK {price}</span>}
       <span>NOK {discountedPrice}</span>
-      {priceDifference > 0 && <p className="text-danger pt-2 m-0 fw-bold">SAVE NOK {priceDifference},-</p>}
+      {priceDifference > 0 && <p className="text-danger pt-2 m-0 fw-bold">SAVE NOK {priceDifference}</p>}
     </>
   );
 }
