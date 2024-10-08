@@ -26,7 +26,7 @@ function Home() {
     return (
       <div className="frontpage-main-container">
         <div className="container text-center pt-5">
-          <div className="loader mx-auto my-5"></div>;
+          <div className="loader mx-auto my-5"></div>
         </div>
       </div>
     );
@@ -36,7 +36,8 @@ function Home() {
     return (
       <div className="frontpage-main-container">
         <div className="container text-center pt-5">
-          <div className="loader mx-auto my-5"></div>;<p className="error-text text-danger fw-medium pt-3">There was a problem filling the store. Please try again later.</p>;
+          <div className="loader mx-auto my-5"></div>
+          <p className="error-text text-danger fw-medium py-3">There was a problem filling the store. Please try again later.</p>
         </div>
       </div>
     );
