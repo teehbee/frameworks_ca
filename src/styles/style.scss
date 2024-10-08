@@ -29,11 +29,7 @@ $main-font-colour: #414141;
 #root {
   min-height: 100vh;
   display: grid;
-  grid-template-rows: auto auto 1fr auto;
-}
-
-main {
-  padding-top: 50px;
+  grid-template-rows: auto 1fr auto;
 }
 
 * {
