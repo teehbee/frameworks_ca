@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import CartProvider, { CartContext } from "../utils/CartContext";
 import Card from "react-bootstrap/Card";
@@ -43,7 +43,7 @@ function ItemCard({ data }) {
         </div>
       ))}
       {showPopup && (
-        <Alert variant="success" className="success-popup fixed-bottom mx-auto w-50 border border-primary">
+        <Alert variant="success" className="success-popup fixed-bottom mx-auto w-50">
           Product added to cart
         </Alert>
       )}
