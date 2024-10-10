@@ -360,8 +360,6 @@ $custom-fs-4-rem: 4rem;
   right: 20px;
 }
 
-// // Search dropdown
-
 .autocomplete-dropdown {
   position: absolute;
   background-color: white;
@@ -381,6 +379,17 @@ $custom-fs-4-rem: 4rem;
   cursor: pointer;
   z-index: 10000;
 }
+
+@keyframes dropDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+// // Search dropdown
 
 // Contact page
 
@@ -408,15 +417,6 @@ $custom-fs-4-rem: 4rem;
   cursor: pointer;
   right: 20px;
   padding-top: 16px;
-}
-
-@keyframes dropDown {
-  from {
-    transform: translateY(-100%);
-  }
-  to {
-    transform: translateY(0);
-  }
 }
 
 .item-card-img {
