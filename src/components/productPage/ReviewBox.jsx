@@ -1,4 +1,3 @@
-import React from "react";
 import { starFilled, starNotFilled } from "../../assets/icons";
 
 function ReviewBox({ reviews }) {

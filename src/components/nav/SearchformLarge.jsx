@@ -1,4 +1,3 @@
-import React from "react";
 import { searchIconThin } from "../../assets/icons/index.jsx";
 
 function SearchFieldLargeScreen({ handleSearchSubmit, searchTerm, handleSearchChange, filteredSuggestions, handleSuggestionClick }) {

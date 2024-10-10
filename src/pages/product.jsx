@@ -1,4 +1,3 @@
-import React from "react";
 import { useProduct } from "../api/product";
 import ProductInfo from "../components/productPage/ProductInfo";
 import ReviewBox from "../components/productPage/ReviewBox";

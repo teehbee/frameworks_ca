@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { CartContext } from "../utils/CartContext.jsx";
 import { Link } from "react-router-dom";
 import { cartSmall, cartLarge } from "../../assets/icons/index.jsx";

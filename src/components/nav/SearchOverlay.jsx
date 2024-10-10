@@ -1,4 +1,3 @@
-import React from "react";
 import { searchIconThin, backIcon } from "../../assets/icons/index.jsx";
 
 function SearchOverlay({ onClose, handleSearchSubmit, searchTerm, handleSearchChange, filteredSuggestions, handleSuggestionClick }) {

@@ -1,5 +1,3 @@
-import React from "react";
-
 function ProductPrice({ price, discountedPrice }) {
   const priceDifference = (price - discountedPrice).toFixed(2);
   return (
