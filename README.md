@@ -18,8 +18,6 @@ To create an e-commerce website using React displaying products from an api, a s
 
 - A user may checkout from the cart page.
 
--
-
 ## Built with
 
 - React
